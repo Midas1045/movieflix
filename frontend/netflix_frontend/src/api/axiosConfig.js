@@ -1,5 +1,5 @@
 import axios from 'axios';
 
 export default axios.create({
-    baseURL:'http://100.48.223.119:8080//api/vi/movies',
+    baseURL:'http://44.211.57.11:8080//api/v1/movies',
 });
