@@ -16,17 +16,21 @@ function Home({ movies }) {
           <div key={movie.imdbId} style={{ width: "200px" }}>
             
             <img
-              src={movie.posterUrl}
+              src={movie.poster}
               alt={movie.title}
               style={{ width: "100%", borderRadius: "8px" }}
             />
 
             <h3>{movie.title}</h3>
 
-            {movie.ytTrailerId && (
-              <Link to={`/Trailer/${movie.ytTrailerId}`}>
+            {movie.trailerLink && (
+              <a
+                href={movie.trailerLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Watch Trailer
-              </Link>
+              </a>
             )}
 
             <br />
